@@ -14,9 +14,13 @@ Creating Websites Hour 1 - HTML
 	- The basic document
 - Writing tags
 	- Introduction to tags
-	- Attributes (maybe remove?)
+	- Attributes
 	- Enclosing vs. Non-enclosing tags
 - Text, lists, and more
 - More on structure
 	- HTML5 structuring tags
 - Creating your first website
+
+### Resources
+
+[HTML5 Doctor - HTML5 Elements Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png)
