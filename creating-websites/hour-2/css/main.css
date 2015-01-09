@@ -1,0 +1,443 @@
+/**
+ * Main CSS
+ *
+ * Colors:
+ *
+ * Yellow: #ffc627;
+ * 			rgb(255,198,39);
+ * Dark Grey: #222;
+ */
+
+html {
+  box-sizing:border-box;
+}
+
+*, *:before, *:after {
+  box-sizing:inherit;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	font-family:Helvetica, Arial, sans-serif;
+	color:#222;
+}
+
+/**
+ * CLEARFIX
+ */
+
+.clearfix {
+	zoom:1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/**
+ * LAYOUT
+ */
+
+.container {
+	width:960px;
+	margin:5px auto;
+}
+
+.column-left,
+.column-right {
+	float:left;
+}
+
+.column-left {
+	width:600px;
+	padding-right:40px;
+}
+
+.column-right {
+	width:360px;
+}
+
+/**
+ * TYPOGRAPHY
+ */
+
+h1 {
+	margin:28px 0;
+	font-size:30px;
+	line-height:1.4;
+}
+
+h2 {
+	margin:0 0 10px;
+	font-size:24px;
+	line-height:1;
+	text-transform:uppercase;
+}
+
+h3 {
+	font-size:18px;
+	line-height:1.2;
+}
+
+p {
+	margin:0 0 10px;
+	font-size:14px;
+	line-height:1.4;
+}
+
+.read-more-button {
+	float:right;
+	padding:3px 5px;
+	color:#ffc627;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:lowercase;
+	background-color:#222;
+}
+
+.read-more-button:hover {
+	color:#222;
+	background-color:#ffc627;
+}
+
+/**
+ * 1. LOGO
+ */
+
+.logo {
+	float:left;
+	width:22%;
+	height:150px;
+	margin-right:3%;
+	padding:20px 10px;
+	color:#222;
+	font-size:40px;
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+	border:10px solid #222;
+}
+
+.logo img {
+	display:block;
+	max-width:100%;
+	height:auto;
+	margin-bottom:5px;
+}
+
+/**
+ * 2. HEADER
+ */
+
+.global-header {
+	padding-bottom:10px;
+	border-bottom:1px solid #222;
+}
+
+.global-header a {
+	text-decoration:none;
+}
+
+/*	Toolbar */
+
+.global-header .toolbar {
+	float:right;
+	margin-top:10px;
+}
+
+.global-header .toolbar a {
+	float:right;
+	margin-left:2px;
+	padding:5px 10px;
+	color:#ffc627;
+	font-size:14px;
+	text-transform:lowercase;
+	background-color:#222;
+}
+
+/**
+ * 3. NAVIGATION
+ */
+
+.global-navigation {
+	clear:right;
+	float:right;
+	margin-top:82px;
+	background-color:#ffc627;
+}
+
+.global-navigation ul {
+	list-style:none;
+	float:right;
+	margin:0;
+	padding:0;
+}
+
+.global-navigation li {
+	float:left;
+	margin-left:5px;
+}
+
+.global-navigation li:first-child {
+	margin-left:0;
+}
+
+.global-navigation a {
+	display:block;
+	padding:7px 20px;
+	color:#222;
+	font-weight:bold;
+	text-transform:uppercase;
+	transition:all .2s ease-in;
+}
+
+.global-navigation a:hover,
+.global-navigation a.active {
+	color:#ffc627;
+	background-color:#222;
+	transition:all .2s ease-out;
+}
+
+/**
+ * 4. CONTENT
+ */
+
+.global-content {
+	clear:both;
+}
+
+/**
+ * 5. BANNER
+ */
+
+.banner {
+	margin-bottom:28px;
+}
+
+.banner .main-article {
+	position:relative;
+	float:left;
+	width:600px;
+
+}
+
+.banner .main-article h2 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:20px;
+	font-size:28px;
+	text-transform:none;
+	box-shadow:inset 0 0 180px 60px #000;
+	/*background-color:rgba(34,34,34,0.8);*/
+}
+
+.banner .main-article a {
+	position:absolute;
+	left:20px;
+	bottom:20px;
+	color:#ffc627;
+	text-decoration:none;
+}
+
+.banner .main-article img {
+	display:block;
+	margin:0;
+	padding:0;
+}
+
+/* Supplementary */
+
+.banner .supplementary {
+	float:left;
+	width:360px;
+	background-color:#222;
+	border-left:1px solid #ffc627;
+}
+
+.banner .supplementary ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.banner .supplementary li {
+	float:left;
+	width:100%;
+	height:120px;
+	padding-right:10px;
+	border-bottom:1px solid #ffc627;
+}
+
+.banner .supplementary li:last-child {
+	border-bottom:0;
+}
+
+.banner .supplementary img {
+	float:left;
+	width:auto;
+	height:100%;
+	margin-right:10px;
+}
+
+.banner .supplementary h3 {
+	margin:10px 0 0;
+}
+
+.banner .supplementary a {
+	color:#fff;
+	text-decoration:none;
+}
+
+/**
+ * 6. LATEST NEWS
+ */
+
+.latest-news {
+	margin-bottom:20px;
+	padding:10px 15px;
+	border:1px solid #ffc627;
+	border-top:8px solid #ffc627;
+}
+
+.latest-news h2 {
+	margin:0 0 10px;
+}
+
+.news-article {
+	clear:both;
+	margin-bottom:15px;
+	border-bottom:1px solid #ffc627;
+}
+
+.news-article h3 {
+	float:left;
+	margin:0 0 5px;
+}
+
+.news-article p {
+	clear:left;
+	margin:0 0 10px;
+	font-size:14px;
+	line-height:1.4;
+}
+
+.news-article img {
+	float:right;
+	margin:0 0 14px 10px;
+	border:1px solid #222;
+}
+
+/**
+ * 7. OPINIONS
+ */
+
+.opinions h2 {
+	margin-bottom:10px;
+	padding:10px 15px;
+	background-color:#ffc627;
+}
+
+/**
+ * 8. GOSSIP
+ */
+
+.latest-gossip {
+	margin-bottom:20px;
+	padding:18px 15px;
+	color:#fff;
+	background-color:#222;
+}
+
+.latest-gossip h2 {
+	color:#ffc627;
+}
+
+/**
+ * 9. SIDEBAR
+ */
+
+.sidebar-content h3 {
+	margin-bottom:5px;
+	font-size:16px;
+}
+
+.sidebar-content p {
+	margin:0 0 10px;
+	color:#bbb;
+}
+
+.sidebar-content a {
+	float:right;
+	color:#ffc627;
+	text-decoration:none;
+}
+
+.from-elsewhere p {
+	color:#222;
+}
+
+/**
+ * 10. FOOTER
+ */
+
+.global-footer {
+	clear:both;
+	width:100%;
+	margin-top:20px;
+	padding:20px 0;
+	color:#fff;
+	background-color:#222;
+}
+
+/**
+ * 11. FOOTER MENU
+ */
+
+.footer-menu ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.footer-menu li {
+	margin-bottom:5px;
+}
+
+.footer-menu > ul > li {
+	float:left;
+	width:33.333334%;
+	margin:0 0 20px;
+	padding:0 20px 0 0;
+}
+
+.footer-menu > ul > li:nth-of-type(3n+1) {
+	clear:left;
+}
+
+.footer-menu h3 {
+	margin:0 0 15px;
+	color:#ffc627;
+}
+
+.footer-menu a {
+	color:#fff;
+	font-size:14px;
+	text-decoration:none;
+}
+
+.footer-menu a:hover {
+	color:#ffc627;
+}
