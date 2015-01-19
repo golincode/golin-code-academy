@@ -111,6 +111,135 @@ div ul {
 }
 
 div > ul {
-    //this CSS, however, would only style the forst UL.
+    //this CSS, however, would only style the first UL.
 }
 ```
+
+##Layout++
+
+**overflow** - Imagine this; you're writing on a page and you only have limited paper.
+Everything has to fit in the space you've been given, and you can't overrun. How do you do this in CSS?
+
+```
+#element {
+    overflow: visible; // displays the text overflow no matter what.
+    overflow: hidden; // hides the text overflow no matter what.
+    overflow: scroll; // adds scroll bars to the content element. 
+    overflow: auto; // adds content scroll bars as and where they're necessary.
+}
+```
+
+There are also directional overflow properties, which are less uncommon; _overflow-y_ and _overflow-x_.
+These both have the same properties as _overflow_, just _overflow-y_ refers to vertical overflow,
+whereas _overflow-x_ refers to horizontal overflow.
+
+**position** - As you might think, this specifies how the element is positioned on the page.
+
+```
+#importantElement {
+    position: static; //default, only use this if you're overriding a different styling.
+    
+    position: relative; //Element's original position remains in the document, 
+                        //but is now 'nudged' in specified direction.
+                        
+    position: absolute; //Element is removed from the flow of the document, letting the user 
+                        //specify the exact position you want it to have.
+                        
+    position: fixed; //Just like absolute, but relative to document instead of a parent element
+    
+    position: inherit; //As this element is a 'child', we get the property from the containing element
+}
+```
+
+Now, one necessary part of this that we haven't mentioned is how we go about 'nudging' the elements around.
+We use four properties, namely _top_ , _right_, _bottom_ and _left_.
+```
+#importantElement {
+    position: absolute; //Just like absolute, but relative to document instead of a parent element
+    
+    bottom: 5px; //Can be any value of size accepted by CSS.
+    left: 5px; //Again, can be any value of size accepted by CSS.
+}
+```
+This then results in the following;
+
+![This would then give is the following](http://cdn.css-tricks.com/wp-content/uploads/2012/03/positionabsolute.png)
+
+As you can see, the distance values that we have passed in reference distance from the _side referenced_.
+
+**float** - The origin of this property is in print design, where an image (or other elements)
+can be set on a page such that text will wrap around them as needed, which is commonly called _text wrap_.
+
+![http://css-tricks.com/wp-content/csstricks-uploads/print-layout.png](http://css-tricks.com/wp-content/csstricks-uploads/print-layout.png)
+
+In this layout, text can be told to either honor the text wrap, or completely ignore it.
+The same is true when using CSS.
+
+Setting the layout is, again, a case of using the property's name with a value.
+```
+#importantElement {
+    float: left; //moves the element as far left as possible in its' containing element.
+    
+    float: right; //moves the element as far right as possible in its' containing element.
+    
+    float: none; //removes any float set. Mostly used to override other conflicting classes.
+    
+    float: inherit; //As this is a 'child' element, it gets the float from the parent.
+}
+```
+
+**clear** - This is a sister property of float. An element that has the _clear_ property
+set on it will not move up next to the floated element, but will move itself down past
+the float.
+
+![Non-cleared image](http://css-tricks.com/wp-content/csstricks-uploads/unclearedfooter.png)
+
+This is the result of three elements, two of which have been floated in opposite directions.
+We usually want the footer at the bottom of the page, so, to this end we can use the _clear_
+parameter.
+
+```
+#footer {
+    clear: both; //used to clear elements that have either float: right or float: left.
+    
+    //clear: left; //used to clear elements that are floated left.
+    
+    //clear: right; //this is used to clear elements that are floated right
+    
+    //clear: none; //this is used to re-set an element to a non-cleared state.
+}
+
+```
+
+This will then result in the following;
+
+![Cleared image](http://css-tricks.com/wp-content/csstricks-uploads/clearedfooter.png)
+
+**Div Collapse** - Floats are all good, and super useful, right? Yes, but they can also
+do evil things if you're not careful. The issue here is that if there's no visible background
+you might not even notice it.
+
+The issue is that if all of your content elements are floated, then the wrapping container's
+height will drop to zero, which can be a serious issue.
+
+![collapsed div](http://css-tricks.com/wp-content/csstricks-uploads/collapse.png)
+
+There is however a way to save this situation!
+
+Enter the _clearfix_
+
+**Cleafix** - uses a clever CSS selector to clear floats.
+You apply an additional class like "clearfix" to it, with the following CSS;
+
+```
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+```
+
+This will apply a small bit of content, hidden from view, after the parent
+element which clears the float.
