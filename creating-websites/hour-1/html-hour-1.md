@@ -84,9 +84,9 @@ Gives a good indication what web professionals want to happen
 - HTML tags come in all kinds of flavours
 - Text : **Bold**, #Heading, [Link](https://www.youtube.com/watch?v=BROWqjuTM0g), _Emphasised_, Superscript etc.
 - Formatting : Paragraph, Lists
-- Semantics : Body, Header, Footer
+- Tags like : Body, Header, Footer all have a proper meaning, and should only be used in the correct place.
 
-###What we're going to cover today;
+###General Knowledge;
 
 - Creating a heading. We use the heading tag name (h1) and stick it inside <>.
 Once we've finished the tag, we close it with a / and the tag name, again inside <>
@@ -95,6 +95,7 @@ Once we've finished the tag, we close it with a / and the tag name, again inside
 ```
 
 - Creating a smaller heading. There are six(!) heading types in all; h1, h2, h3, h4, h5 and h6.
+- h1 is the largest heading, and h6 is the smallest heading.
 ```
 <h3> Decorating for Christmas at Golin! </h3>
 ```
@@ -121,7 +122,7 @@ Once we've finished the tag, we close it with a / and the tag name, again inside
 </p>
 ```
 
-- Grouping the text together in a block
+- Grouping the text together in a logical block
 ```
 <div>
     <h3> Decorating for Christmas at Golin! </h3>
@@ -163,7 +164,7 @@ This will be inserted in to the web page later.
 
 - A web page can be very simple, as already shown
 **HOWEVER**
-- A webpage also needs semantic context
+- A webpage also needs semantic context.
 - This is accomplished by using some distinguishing tags
 	- ```<!DOCTYPE html> ```
 	- ```<html></html>```
@@ -191,7 +192,9 @@ This will be inserted in to the web page later.
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Golin PR Week - a demo website for the Golin Code Academy</title>
+        <title>
+        	Golin PR Week - a demo website for the Golin Code Academy
+        </title>
     </head>
 
     <body>
@@ -266,7 +269,7 @@ Everything will break._
     </head>
 ```
 
-###Two different types of blocks
+###Two different types of content containers
 - HTML tags come in two main types
 	- Block tags
 	- Inline tags
@@ -279,7 +282,7 @@ In short, they stack up horizontally and sit under eachother neatly.
 
 ![Element Things](http://netdna.webdesignerdepot.com/uploads/2012/08/boxmodel-block-vs-inline.png)
 
-## Lists; ordered vs. unordered.
+### Lists; ordered vs. unordered.
 - A number of connected items or names written or printed consecutively, typically one below the other
 **OR**
 - "What is there to describe, they're a fucking list; it's not a hard concept" ~ Gareth Bishop
@@ -324,7 +327,7 @@ Now we've covered lists, we can add a navigation bar to our web page;
 ```
 
 ## HTML5 goodness
-- HTML5 has introduced a new set of tags which gives extra semantic value
+- HTML5 has introduced a new set of tags which gives extra meaning to the elements.
 
 ```
 <nav></nav>
@@ -334,23 +337,23 @@ Now we've covered lists, we can add a navigation bar to our web page;
 ```
 <article></article>
 ```
-- News article, Blog or Forum post, sidebar widget
+- Used with news article, Blog or Forum post, or as asidebar widget
 
 ```
 <figure></figure>
 ```
-- One or more images, graphics, code samples
-- With optional ``` <figcaption></figcaption>```
+- Used for one or more images, graphics, code samples
+- Used with an optional ``` <figcaption></figcaption>```
 
  ```
  <aside></aside>
  ```
-- Sidebar, comments section, glossary, advertising, footnote
+- Used as a sidebar, comments section, glossary, advertising, footnote
 
  ```
  <section></section>
  ```
-- A section of page or chapter of an ``` <article></article>```
+- Used for a section of page or chapter of an ``` <article></article>```
 
 
 Now, we change our nav bar to be wrapped in _nav_ tags instead of _div_ tags.
