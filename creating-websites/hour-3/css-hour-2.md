@@ -292,6 +292,9 @@ added to the top and bottom of the text.
 
 ##Warning : Here be dragons. This is where it gets dificult.
 
+**Most of the following content does require Browser Prefixing to work properly, 
+and as such will be included in the examples**
+
 **css animations** - Yes, animations in CSS are a thing that you can do.
 Much more information [right here](http://css-tricks.com/almanac/properties/a/animation/) .
 These can be comma separated if you want to include multiple animations. We need to include
@@ -429,3 +432,82 @@ We also need browser prefixes for the animation definitions.
   }
 }
 ```
+
+**css gradients** - Ever wanted to fade one colour to another? Well, CSS has got you covered!
+We can make gradients by making use of the `background-image` property of an element. If you 
+are wanting a more [Photoshop like](http://www.colorzilla.com/gradient-editor) interface,
+well we can automatically generate the gradient. This is important as usually gradients need
+the browser prefixing we saw earlier. More information
+[right here](http://css-tricks.com/css3-gradients/) along with more examples and uses.
+
+```
+#importantElement {
+
+    background-color: red;
+
+/**
+    background-image: linear-gradient(
+        <where we want it to go>, //not necessary, more information at link above
+        <colour> <colour stop>,
+        <colour> <colour stop>
+    );
+    
+    background-image: radial-gradient(
+        <where we want it to go>, //not necessary, more information at link above
+        <colour> <colour stop>,
+        <colour> <colour stop>
+    );
+**/
+
+    background-image: linear-gradient(
+      to top right, 
+      red,
+      #f06d06
+    );
+    
+    background-image: linear-gradient(
+      to top right, 
+      red 50%, //red to 20% of the way across, and then ...
+      yellow //YELLOW!
+    );
+}
+```
+
+**Box Shadow** - Floating objects are cool, right? How about making your entire 
+web page float? Aww yeah. Can be used for anything that is a block level element.
+
+```
+#importantElement {
+    box-shadow: 
+        <horizontal offset>
+        <vertical offset>
+        <blur radius>
+        <spread> 
+        <colour>;
+        
+    box-shadow: 3px 3px 5px 6px fuchsia;
+}
+```
+![Image of Box Shadow](http://www.funnygarbage.com/sites/default/files/images/all_around.jpg)
+
+- The _horizontal offset_ of the shadow. A positive value will have the shadow 
+on the right side of the box, while a negative will place it on the left.
+- The _vertical offset_ of the shadow. Same as _horizontal offset_, just up and
+down instead of left and right.
+- The _blur radius_ (optional, px). How much blur to apply to the shadow
+(0px is the lowest value).
+- The _spread radius_ (optional, px). Shadow size; positive numbers make it larger,
+negative make it smaller. It defaults to zero, which makes it the same size as the blur.
+
+What we can also do with a box shadow is add a parameter to the beginning called **inset**.
+What this will do is move the shadow from _outside_ the element to _inside_ the element.
+
+```
+#importantElement {
+    box-shadow: inset 3px 4px 5px black;
+}
+```
+
+![Image of Inset Box Shadow](http://designshack.net/wp-content/uploads/innerinsetshadow-13.jpg)
+
+AMRoche, 2015
