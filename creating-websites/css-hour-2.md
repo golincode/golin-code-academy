@@ -288,3 +288,144 @@ added to the top and bottom of the text.
     line-height: normal; //lets the browser decide which is best
     line-height: inherit; //gets the line height from further up the document tree
 }
+```
+
+##Warning : Here be dragons. This is where it gets dificult.
+
+**css animations** - Yes, animations in CSS are a thing that you can do.
+Much more information [right here](http://css-tricks.com/almanac/properties/a/animation/) .
+These can be comma separated if you want to include multiple animations. We need to include
+browser prefixes so the animations work in each browser properly.
+```
+#importantElement {
+/**
+    animation:
+        <name of animation> Pick a name without spaces
+        <duration> s or ms
+        <delay> s or ms
+        <how many times to loop> infinite, or a number
+        <fill mode> forwards, backwards, both, none
+        <animation direction>; normal, alternate
+**/
+
+    -webkit-animation: bounce 1s infinite;
+    -moz-animation:    bounce 1s infinite;
+    -o-animation:      bounce 1s infinite;
+    animation:         bounce 1s infinite;
+}
+```
+
+So, now we have the animation declared, we need to write the actual animation.
+This is done using Keyframes. Imagine keyframes as the images that are part of a film.
+We can use 'from' and 'to' to define how we want the elements to change.
+
+```
+@keyframes bounce {
+  from {
+    font-size: 10px;
+  }
+  
+  to {
+    font-size: 20px;
+  }
+}
+```
+
+However, as you can see, this is not enough for a bounce. We only have two points!
+Luckily, we can also use percentages to define these.
+
+```
+@keyframes bounce {
+  0% {
+    font-size: 10px;
+  }
+  
+  25%, 75% {
+    font-size: 15px; 
+  }
+  
+  50% {
+    font-size: 20px;
+  }
+  
+  100% {
+    font-size: 10px;
+  }
+}
+```
+
+We also need browser prefixes for the animation definitions.
+
+```
+@-webkit-keyframes bounce {
+  0% {
+    font-size: 10px;
+  }
+  
+  25%, 75% {
+    font-size: 15px; 
+  }
+  
+  50% {
+    font-size: 20px;
+  }
+  
+  100% {
+    font-size: 10px;
+  }
+}
+
+@-moz-keyframes bounce {
+  0% {
+    font-size: 10px;
+  }
+  
+  25%, 75% {
+    font-size: 15px; 
+  }
+  
+  50% {
+    font-size: 20px;
+  }
+  
+  100% {
+    font-size: 10px;
+  }
+}
+
+@-o-keyframes bounce {
+  0% {
+    font-size: 10px;
+  }
+  
+  25%, 75% {
+    font-size: 15px; 
+  }
+  
+  50% {
+    font-size: 20px;
+  }
+  
+  100% {
+    font-size: 10px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    font-size: 10px;
+  }
+  
+  25%, 75% {
+    font-size: 15px; 
+  }
+  
+  50% {
+    font-size: 20px;
+  }
+  
+  100% {
+    font-size: 10px;
+  }
+}
+```
