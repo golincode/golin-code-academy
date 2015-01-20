@@ -243,3 +243,48 @@ You apply an additional class like "clearfix" to it, with the following CSS;
 
 This will apply a small bit of content, hidden from view, after the parent
 element which clears the float.
+
+##Appearance++
+**text-transform** - Allows us to target specific elements and change
+how the text of the element looks.
+
+```
+#importantElement {
+    text-transform: capitalize;
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: none;
+    text-transform: inherit;
+}
+```
+
+**list-style** - We covered lists in the opening HTML hour, and this CSS key
+is used to style the bullet points associated with Lists. Is also shorthand
+for separate _list-style_ commands.
+
+
+```
+#importantElement {
+    list-style: <type> <position> <image>; //is shorthand for these declarations;
+    
+    list-style-type: none; //so very many.
+    list-style-position: inside; //or 'outside'.
+    list-style-image: url(''); //or none.
+}
+```
+
+List Style Types; disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-latin, upper-latin, armenian, georgian, lower-alpha, upper-alpha, none
+
+**line-height** - This property affects the text, and is the last element
+concerning text we're going to cover. Again, this takes most of its' cues from
+the days of a printing press. Whichever value you specify is split equaly and 
+added to the top and bottom of the text.
+
+```
+#importantElement {
+    line-height: 20px; //adds ten pixels to the top and bottom
+    line-height: 150%; //adds 75% of the font size to the top and bottom
+    line-height: 2; //adds 1 times the font size to top and bottom
+    line-height: normal; //lets the browser decide which is best
+    line-height: inherit; //gets the line height from further up the document tree
+}
