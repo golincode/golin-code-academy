@@ -24,3 +24,4 @@ Creating Websites Hour 1 - HTML
 ### Resources
 
 [HTML5 Doctor - HTML5 Elements Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png)
+[Slideshow by AMRoche](http://slides.com/alexroche/golin-code-academy-the-first-html#/)
