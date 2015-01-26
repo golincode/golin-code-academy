@@ -57,10 +57,10 @@ html, body {
 	float:left;
 }
 
-.column-left {
+/*.column-left {
 	width:600px;
 	padding-right:40px;
-}
+}*/
 
 .column-right {
 	width:360px;
@@ -308,8 +308,8 @@ p {
 .latest-news {
 	margin-bottom:20px;
 	padding:10px 15px;
-	border:1px solid #ffc627;
-	border-top:8px solid #ffc627;
+	/*border:1px solid #ffc627;
+	border-top:8px solid #ffc627;*/
 }
 
 .latest-news h2 {
@@ -318,8 +318,8 @@ p {
 
 .news-article {
 	clear:both;
-	margin-bottom:15px;
-	border-bottom:1px solid #ffc627;
+	/*margin-bottom:15px;
+	border-bottom:1px solid #ffc627;*/
 }
 
 .news-article h3 {

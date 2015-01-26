@@ -1,34 +1,71 @@
-/* Cheats have smelly....feets */
 
-/* Visibility */
+.column-left {
 
+	/* Width */
+	width:600px;
+	padding-right:40px;
 
-/* Display */
+}
 
+.news-article img{
 
-/* Width */
+	/* Height */
+	height:130px;
 
+	/* Border-Radius */
+	border-radius:10px;
 
-/* Height */
+}
 
+.news-article{
 
-/* Padding */
+	/* Padding */
+	padding: 15px 0;
 
+	/* Margin */
+	margin-bottom: 15px;
 
-/* Margin */
+	/* Border */
+	border-bottom:1px solid #ffc627;
 
+}
 
-/* Border */
+.latest-news {
 
+	/* Border */
+	border:1px solid #ffc627;
+	border-top:8px solid #ffc627;
+}
 
-/* Border-Radius */
+.news-article p {
 
+	/* Text Align */
+	text-align: right;
 
-/* Text Align */
+	/* Text Decoration */
+	text-decoration: italic;
 
+	/* Font Color*/
+	font-color:black;
+	font-color:#dddddd; /* grey */
+}
 
-/* Text Decoration */
+.news-article h3 {
 
+	/* Text Decoration */
+	text-decoration: underline;
 
-/* Font Color*/
+}
 
+.news-article-2 {
+
+	/* Visibility */
+	visibility:hidden;
+
+}
+
+.news-article-3 {
+
+	/* Display */
+	display:none;
+}
