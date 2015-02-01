@@ -1,0 +1,65 @@
+.global-footer {
+
+	/* Background */
+
+
+}
+
+p {
+	/* Font Size */
+
+
+	/* Font Family */
+	/* HINT: Try
+    font-family: "Times New Roman", Times, serif;
+    font-family: Helvetica, Arial, sans-serif; */
+
+
+
+	/* Line Height */
+
+}
+
+
+.global-navigation a {
+
+	/* Font Weight */
+
+
+}
+
+
+h2 {
+
+	/* Text-Transform  */
+	/* HINT: Try UPPERCASE, lowercase or Capitalize */
+
+
+}
+
+.global-footer li
+{
+	/* List Style */
+
+}
+
+.footer-menu > ul > li {
+
+	/* Float Part 1 */
+
+
+}
+
+.footer-menu > ul > li:nth-of-type(3n+1) {
+
+	/* Float Part 2 */
+
+}
+
+.banner .main-article h2 {
+
+	/*Box Shadow */
+
+
+}
+

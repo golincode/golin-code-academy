@@ -1,0 +1,86 @@
+.global-footer {
+
+	/* Background */
+
+   background-color:#222;
+
+   /* OR */
+
+   background-image: url("../images/pattern.jpg");
+
+   /* OR */
+
+   background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+   background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+   background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+   background: linear-gradient(red, blue); /* Standard syntax */
+
+}
+
+p {
+	/* Font Size */
+	font-size: 14px;
+
+	/* Font Family */
+	/* HINT: Try
+    font-family: "Times New Roman", Times, serif;
+    font-family: Helvetica, Arial, sans-serif; */
+
+	font-family: "comic sans ms";
+
+	/* Line Height */
+	line-height:1.4;
+}
+
+
+.global-navigation a {
+
+	/* Font Weight */
+	font-weight:bold;
+
+}
+
+
+h2 {
+
+	/* Text-Transform  */
+	/* HINT: Try UPPERCASE, lowercase or Capitalize */
+	text-transform: uppercase;
+
+}
+
+.global-footer li
+{
+	/* List Style */
+	list-style:square outside none;
+
+	/* OR */
+
+	list-style:none;
+}
+
+.footer-menu > ul > li {
+
+	/* Float Part 1 */
+	float:left;
+	width:33.333334%;
+
+}
+
+.footer-menu > ul > li:nth-of-type(3n+1) {
+
+	/* Float Part 2 */
+	clear:left;
+}
+
+.banner .main-article h2 {
+
+	/*Box Shadow */
+	box-shadow: -10px -10px 10px 10px #ddd;
+
+	/* OR */
+
+	box-shadow:inset 0 0 180px 60px #000;
+
+}
+
